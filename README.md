@@ -1,4 +1,6 @@
-## SKN09-3rd-4Team : LLM을 연동한 내외부 문서 기반 질의 응답 시스템
+### SKN09-3rd-4Team : LLM을 연동한 내외부 문서 기반 질의 응답 시스템
+
+<br>
 
 # 📌 목차
 
@@ -37,12 +39,12 @@
 ---
 
 # 2️. **프로젝트 개요**
-## 1. 프로젝트 개요
+## 2-1) 프로젝트 개요
 Polict_Support Chatbot을 통해 
 - 사용자가 보험 상품을 쉽게 이해하고, 자신에게 적합한 보험을 찾도록 지원
 - 기존 가입된 보험의 보장 내용을 명확히 파악할 수 있도록 지원
 
-## 2. 필요성 및 배경
+## 2-2) 필요성 및 배경
 ### **보험 미가입 사유**
 ![image](https://github.com/user-attachments/assets/651b2cc0-423a-4dbc-8232-1b6e921bc73a)
 - 출처 | https://kiri.or.kr/report/downloadFile.do?docId=499489
@@ -56,14 +58,13 @@ Polict_Support Chatbot을 통해
 - 보험사 내 AI 도입율이 20% 미만으로 느끼고 있었지만 최대 80%까지는 도입을 추진하는 것으로 나타남
 <br>
 
-## 3. 목표
+## 2-3) 목표
 이 프로젝트의 주요 목표는 **사용자 친화적인 보험 정보 서비스를 제공하는 것**입니다.
 - 맞춤형 보험 추천: 보험에 처음 가입하려는 사용자가 자신의 니즈에 맞는 최적의 보험 상품을 찾을 수 있도록 지원
 
 - 보장 범위 안내: 사용자가 가입한 보험의 보장 내역을 한눈에 확인하고 이해할 수 있도록 분석 및 제공
 
 - 보험 정보 접근성 개선: 어려운 보험 약관을 쉽게 이해할 수 있도록 정리 및 시각화하여 사용자 경험 향상
-<br>
 
 
 <br>
@@ -77,7 +78,7 @@ Polict_Support Chatbot을 통해
 
 |🛠 | |
 |:---:|---|
-|개발 도구  | ![VS Code](https://img.shields.io/badge/-VS%20Code-007ACC?logo=visualstudiocode&logoColor=white) ![RunPod](https://img.shields.io/badge/-RunPod-5F43DC?logo=cloud&logoColor=white)|
+|개발 도구| ![VS Code](https://img.shields.io/badge/-VS%20Code-007ACC?logo=visualstudiocode&logoColor=white) ![RunPod](https://img.shields.io/badge/-RunPod-5F43DC?logo=cloud&logoColor=white)|
 |개발 언어| ![Python](https://img.shields.io/badge/-Python-3776AB?logo=python&logoColor=white)|
 |Vector DB|![FAISS](https://img.shields.io/badge/-FAISS-009999?logo=meta&logoColor=white)|
 |사용 모델| ![OpenAI-GPT4](https://img.shields.io/badge/GPT--3.5--Turbo-00A67E?style=flat&logo=openai&logoColor=white) ![HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97%20HF_transformer%20-yellow) ![Langchain](https://img.shields.io/badge/LangChain-FF9900?style=flat&logo=Chainlink&logoColor=white)|
@@ -92,7 +93,8 @@ Polict_Support Chatbot을 통해
 
 # 4️. **시스템 아키텍처**
 
-(이미지 첨부)
+![structuer](https://github.com/user-attachments/assets/e477515c-37b3-413a-9ff0-8c20c79ed7de)
+
 
 <br>
 
@@ -112,11 +114,11 @@ Polict_Support Chatbot을 통해
 
 # 6️. **요구사항 명세서**
 
-## 6-1)사용자 페르소나
+## 6-1) 사용자 페르소나
 
 | 항목           | 내용                        |
 |----------------|-----------------------------|
-| 이름           | 김지수 |
+| 이름       | 김지수 |
 | 나이           | 32세 |
 | 직업           | 마케팅 팀 대리 |
 | 거주지         | 서울 강남구 |
@@ -132,14 +134,16 @@ Polict_Support Chatbot을 통해
 |사용자|제주도 렌터카 타고 있다가 사고 났을 때도 국내여행 보험 적용되나요?|
 |챗봇|국내여행 중 렌터카 사고로 인한 상해도 보장 대상이며, 자동차보험과 별개로 청구 가능합니다.|
 
+<br>
+
 ## 6-2) 요구사항 명세서
-  | No. | 기능 요구사항                                    | 부가 설명                            |
-  |-----|--------------------------------------------------|-------------------------------------|
-  |1|사용자는 보험에 관련한 질문을 자연어로 입력할 수 있어야 한다.|자연어 형태로 자유 질문 입력 가능|
-  |2|사용자가 가입한 보험사 및 상품(예: 하나손해보험, 롯데손해보험)을 선택해야한다.|Selectbox 등으로 제공, 해당 정보는 유사도 검색 시 검색 쿼리에 포함|
-  |3|챗봇은 보험 약관 임베딩 DB에서 유사 문서를 검색한 후, 해당 문서를 기반으로 LLM이 응답을 생성해야 한다.|벡터DB에서 유사도 Top-K 문서 검색, Prompt에 삽입|
-  |4|모든 사용자 질문 및 챗봇 응답은 대화 기록으로 저장되며, 향후 재참조가 가능해야 한다.||
-  |5|챗봇은 필요시 보험사 공식 사이트 링크, 또는 상담사 전화번호 등의 정보를 제공해야 한다.|보험사 링크, 전화번호 또는 문의 양식 버튼|
+| No. | 기능 요구사항                                    | 부가 설명                            |
+|-----|--------------------------------------------------|-------------------------------------|
+|1|사용자는 보험에 관련한 질문을 자연어로 입력할 수 있어야 한다.|자연어 형태로 자유 질문 입력 가능|
+|2|사용자가 가입한 보험사 및 상품(예: 하나손해보험, 롯데손해보험)을 선택해야한다.|Selectbox 등으로 제공, 해당 정보는 유사도 검색 시 검색 쿼리에 포함|
+|3|챗봇은 보험 약관 임베딩 DB에서 유사 문서를 검색한 후, 해당 문서를 기반으로 LLM이 응답을 생성해야 한다.|벡터DB에서 유사도 Top-K 문서 검색, Prompt에 삽입|
+|4|모든 사용자 질문 및 챗봇 응답은 대화 기록으로 저장한다.||
+|5|챗봇은 필요시 보험사 공식 사이트 링크, 또는 상담사 전화번호 등의 정보를 제공해야 한다.|보험사 링크, 전화번호 또는 문의 양식 버튼|
 
 <br>
 
