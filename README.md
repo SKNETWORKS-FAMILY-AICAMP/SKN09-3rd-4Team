@@ -1,5 +1,4 @@
-# SKN09-3rd-4Team 
----
+## SKN09-3rd-4Team : LLM을 연동한 내외부 문서 기반 질의 응답 시스템
 
 # 📌 목차
 
@@ -21,15 +20,19 @@
 ----
 
 # 1️. **팀 소개**
-### 팀명: : PoliSupport Lab 
+### 팀 명: : PoliSupport Lab 🧪👨‍🔬👩‍🔬
 -  "Policy + Support + Lab"으로, 보험 약관에 대한 연구와 개발을 통해 사용자가 자신에게 적합한 보험을 쉽게 찾을 수 있도록 돕고, 기존에 가입한 보험에 대한 정보도 쉽게 확인할 수 있는 시스템을 개발하는 팀입니다.
   
 <br>
 
-### 팀원 소개
+### 팀 원 소개
 <br>
 
-| [@김도연](https://github.com/doyeon158)  | [@김우중](https://github.com/kwj9942)  | [@김정훈](https://github.com/Zayden0815)  | [@이윤재](https://github.com/dadambi116)   |
+|김도연|김우중|김정훈|이윤재|
+|-------|-------|---------|-------|
+| [김도연](https://github.com/doyeon158)  | [김우중](https://github.com/kwj9942)  | [김정훈](https://github.com/Zayden0815)  | [이윤재](https://github.com/dadambi116)   |
+
+<br>
 
 ---
 
@@ -63,57 +66,52 @@ Polict_Support Chatbot을 통해
 <br>
 
 
+<br>
+
+---
+
+
 
 # 3️. **기술 스택 & 사용 모델**
 <br>
 
-### 🛠 협업 및 문서화  
-![Discord](https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=Discord&logoColor=white) 
-![Notion](https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=Notion&logoColor=white)  
-<br>
+|🛠 | |
+|:---:|---|
+|개발 도구  | ![VS Code](https://img.shields.io/badge/-VS%20Code-007ACC?logo=visualstudiocode&logoColor=white) ![RunPod](https://img.shields.io/badge/-RunPod-5F43DC?logo=cloud&logoColor=white)|
+|개발 언어| ![Python](https://img.shields.io/badge/-Python-3776AB?logo=python&logoColor=white)|
+|Vector DB|![FAISS](https://img.shields.io/badge/-FAISS-009999?logo=meta&logoColor=white)|
+|사용 모델| ![OpenAI-GPT4](https://img.shields.io/badge/GPT--3.5--Turbo-00A67E?style=flat&logo=openai&logoColor=white) ![HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97%20HF_transformer%20-yellow) ![Langchain](https://img.shields.io/badge/LangChain-FF9900?style=flat&logo=Chainlink&logoColor=white)|
+|인터페이스| ![streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat&logo=Streamlit&logoColor=white) |
 
-### 💻 도구  
-![VSCode](https://img.shields.io/badge/VScode-007ACC?style=for-the-badge&logo=Visual-Studio-Code&logoColor=white)
-<br>
-
-### 😺 형상 관리
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=Git&logoColor=white) 
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white)  
-<br>
-
-### 🚀 프로그래밍 언어  
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white)  
-<br>
-
-### 📊 데이터 분석  
-![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=Pandas&logoColor=white) 
-![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=NumPy&logoColor=white)  
-<br>
-
-### 🤖 사용 모델  
-![huggingface](https://github.com/user-attachments/assets/2b30a70c-d60f-4ddc-abd6-dafa3469ceeb)
-- Embedding Model
-- LLM Model
 
 <br>
 
-### 🔗 대시보드  
-![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white)  
-<br>
+---
+
 
 
 # 4️. **시스템 아키텍처**
 
 (이미지 첨부)
-- 백엔드 언어: Python (FastAPI)
-- 벡터DB: FAISS
-- LLM 모델: OpenAI GPT-4  + 보험 도메인 파인튜닝 모델
+
+<br>
+
+---
+
+
 
 # 5️. **WBS**
 
+(이미지 첨부)
+
+<br>
+
+---
+
+
 # 6️. **요구사항 명세서**
 
-- 사용자 페르소나
+## 6-1)사용자 페르소나
 
 | 항목           | 내용                        |
 |----------------|-----------------------------|
@@ -133,7 +131,7 @@ Polict_Support Chatbot을 통해
 |사용자|제주도 렌터카 타고 있다가 사고 났을 때도 국내여행 보험 적용되나요?|
 |챗봇|국내여행 중 렌터카 사고로 인한 상해도 보장 대상이며, 자동차보험과 별개로 청구 가능합니다.|
 
-- 요구사항 명세서
+## 6-2) 요구사항 명세서
   | No. | 기능 요구사항                                    | 부가 설명                            |
   |-----|--------------------------------------------------|-------------------------------------|
   |1|사용자는 보험에 관련한 질문을 자연어로 입력할 수 있어야 한다.|자연어 형태로 자유 질문 입력 가능|
@@ -142,14 +140,29 @@ Polict_Support Chatbot을 통해
   |4|모든 사용자 질문 및 챗봇 응답은 대화 기록으로 저장되며, 향후 재참조가 가능해야 한다.||
   |5|챗봇은 필요시 보험사 공식 사이트 링크, 또는 상담사 전화번호 등의 정보를 제공해야 한다.|보험사 링크, 전화번호 또는 문의 양식 버튼|
 
+<br>
+
+---
+
+
 
 # 7️. **데이터 및 전처리**
+
+<br>
+
+---
+
 
 # 8. DB 연동 구현 코드
 - VectorDB: 임베딩된 보험 약관 저장
   - 사용 툴: FAISS or ChromaDB
   - 검색: cosine similarity 기반 유사도
   - [코드 링크](https://)
+
+<br>
+
+---
+
 
 # 9. 테스트 계획 및 결과 보고서
 - 테스트 시나리오
@@ -168,6 +181,11 @@ Polict_Support Chatbot을 통해
 | 4 | 치아보험은 과거 충치 이력 있으면 가입이 안 되나요? | . | 기존 충치 이력이 있다면 그 치아는 보장 제외되지만, 완치 후 새로운 충치가 생긴 경우에는 보장이 가능.| T/F | xx 초 |
 | 5 | 암 수술 후 재활치료도 보장되나요? | . | 암 주요재활치료비는 급여 항목에 대해 1일 1회, 연간 10회 한도로 보장. | T/F | xx 초 |
 | 6 | 내 친구가 이번에 실비 다 타먹었는데, 나도 방법 좀 알려줘요. | . | 보험금 청구는 정당한 사유에 의해 가능하며, 부정청구를 유도하거나 안내드릴 수 없습니다. | T/F | xx 초 |
+
+
+<br>
+
+---
 
 
 # 10. 진행 과정 중 프로그램 개선 노력
@@ -190,6 +208,11 @@ Polict_Support Chatbot을 통해
 | 4 | 파인튜닝 | ...  | . |
 | 5 | 프롬프트 엔지니어링 | 사용자 선택 보험을 프롬프트에 추가 | . |
 
+<br>
+
+---
+
+
 # 11. 수행결과
 
 - 기능 구성:
@@ -200,8 +223,14 @@ Polict_Support Chatbot을 통해
   - 피드백 버튼 (“도움이 되었나요?”)
   - 대화 기록 저장 및 확인
 
+<br>
+
+---
+
+
 # 12. 한줄 회고
 김도연: <br>
 김우중: <br>
 김정훈: <br>
 이윤재: <br>
+
