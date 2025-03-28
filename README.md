@@ -102,7 +102,8 @@ Polict_Support Chatbot을 통해
 
 # 5️. **WBS**
 
-(이미지 첨부)
+![WBS](https://github.com/user-attachments/assets/72a19c41-a440-469d-883b-64da0609a80b)
+
 
 <br>
 
