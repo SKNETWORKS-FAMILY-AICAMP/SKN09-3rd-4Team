@@ -255,6 +255,14 @@ Polict_Support Chatbot을 통해
 | 5 | 벡터 DB 재설계 | 사용자 보험 선택 사항을 추가해 각 보험을 분류하여 벡터DB 생성 | . |
 
 🔸 OCR: Optical Character Recognition, 이미지 내 문자 인식 기술
+
+<br>
+
+- 파인튜닝 과적합 개선
+
+![image](https://github.com/user-attachments/assets/48b6f846-b71b-4982-bbaa-7bdd1940b720)
+
+
 <br>
 
 ---
