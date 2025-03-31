@@ -113,10 +113,10 @@ Polict_Support Chatbot을 통해
 
 |항목|내용|
 |:---:|---|
-|개발 도구| ![VS Code](https://img.shields.io/badge/-VS%20Code-007ACC?logo=visualstudiocode&logoColor=white) ![RunPod](https://img.shields.io/badge/-RunPod-5F43DC?logo=cloud&logoColor=white) ![Langchain](https://img.shields.io/badge/LangChain-FF9900?style=flat&logo=Chainlink&logoColor=white)|
+|개발 도구| ![VS Code](https://img.shields.io/badge/-VS%20Code-007ACC?logo=visualstudiocode&logoColor=white) ![RunPod](https://img.shields.io/badge/-RunPod-5F43DC?logo=cloud&logoColor=white) |
 |개발 언어| ![Python](https://img.shields.io/badge/-Python-3776AB?logo=python&logoColor=white)|
 |Vector DB|![FAISS](https://img.shields.io/badge/-FAISS-009999?logo=meta&logoColor=white)|
-|사용 모델| ![OpenAI-GPT4](https://img.shields.io/badge/GPT--4o-00A67E?style=flat&logo=openai&logoColor=white) ![HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97%20HF_transformer%20-yellow)|
+|사용 모델| ![OpenAI-GPT4](https://img.shields.io/badge/GPT--4o-00A67E?style=flat&logo=openai&logoColor=white) ![HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97%20HF_transformer%20-yellow) ![Langchain](https://img.shields.io/badge/LangChain-FF9900?style=flat&logo=Chainlink&logoColor=white)|
 |인터페이스| ![streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat&logo=Streamlit&logoColor=white) |
 
 
