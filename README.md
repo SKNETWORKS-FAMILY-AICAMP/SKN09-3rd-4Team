@@ -189,6 +189,12 @@ Polict_Support Chatbot을 통해
     - 다중 공백 및 불필요한 개행 제거
     - MuPDF Error가 발생하는 손상된 페이지 제외
 
+(예시)
+
+![image](https://github.com/user-attachments/assets/fd98817b-b3f1-4999-acb2-59891dd8b950)
+
+![image](https://github.com/user-attachments/assets/21ee552e-281c-4c17-89ac-4bcf30cd2f12)
+
 초기 유사도 검색에서 **불필요한 정보가 포함**되어 잘못된 응답을 보임
 
   ➡️ **데이터 정제 과정을 통해 벡터DB를 재구축**
