@@ -113,10 +113,10 @@ Polict_Support Chatbot을 통해
 
 |항목|내용|
 |:---:|---|
-|개발 도구| ![VS Code](https://img.shields.io/badge/-VS%20Code-007ACC?logo=visualstudiocode&logoColor=white) ![RunPod](https://img.shields.io/badge/-RunPod-5F43DC?logo=cloud&logoColor=white)|
+|개발 도구| ![VS Code](https://img.shields.io/badge/-VS%20Code-007ACC?logo=visualstudiocode&logoColor=white) ![RunPod](https://img.shields.io/badge/-RunPod-5F43DC?logo=cloud&logoColor=white) ![Langchain](https://img.shields.io/badge/LangChain-FF9900?style=flat&logo=Chainlink&logoColor=white)|
 |개발 언어| ![Python](https://img.shields.io/badge/-Python-3776AB?logo=python&logoColor=white)|
 |Vector DB|![FAISS](https://img.shields.io/badge/-FAISS-009999?logo=meta&logoColor=white)|
-|사용 모델| ![OpenAI-GPT4](https://img.shields.io/badge/GPT--3.5--Turbo-00A67E?style=flat&logo=openai&logoColor=white) ![HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97%20HF_transformer%20-yellow) ![Langchain](https://img.shields.io/badge/LangChain-FF9900?style=flat&logo=Chainlink&logoColor=white)|
+|사용 모델| ![OpenAI-GPT4](https://img.shields.io/badge/GPT--4o-00A67E?style=flat&logo=openai&logoColor=white) ![HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97%20HF_transformer%20-yellow)|
 |인터페이스| ![streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat&logo=Streamlit&logoColor=white) |
 
 
@@ -224,14 +224,14 @@ Polict_Support Chatbot을 통해
  
 - 테스트 결과 요약
 
-| No. | 테스트 문장       | 응답한 문장        | 원하는 답변        | 정답 여부 | 응답 속도 |
+<!--| No. | 테스트 문장       | 응답한 문장        | 원하는 답변        | 정답 여부 | 응답 속도 |
 |-----|-------------------|---------------------|--------------------|-----------|-----------|
 | 1 | 업무용 차량 사고로 인해 고객 미팅을 놓치고 손해가 발생했어요. 이 부분도 보상되나요? | . |(업무용자동차보험) 순수 영업상 손해나 기회손실은 보험 보상 대상에 포함되지 않음. | T/F | xx 초 |
 | 2 | 국내 여행지에서 식중독 걸려서 병원 다녀왔는데 보상되나요? | . |(국내여행보험)식중독도 여행 중 발생한 질병으로 간주되어 의료비 보상 가능 | T/F | xx 초 |
 | 3 | 공장에서 전기 점검 중 감전사고로 팔에 화상을 입었고 2주 입원했습니다. 이 경우 보험금 청구가 가능한가요? | . | 감전사고 상해 특별약관에 따라, 보험기간 중 발생한 감전사고로 인한 상해는 보험금 지급 가능| T/F | xx 초 |
 | 4 | 치아보험은 과거 충치 이력 있으면 가입이 안 되나요? | . | 기존 충치 이력이 있다면 그 치아는 보장 제외되지만, 완치 후 새로운 충치가 생긴 경우에는 보장이 가능.| T/F | xx 초 |
 | 5 | 암 수술 후 재활치료도 보장되나요? | . | 암 주요재활치료비는 급여 항목에 대해 1일 1회, 연간 10회 한도로 보장. | T/F | xx 초 |
-| 6 | 내 친구가 이번에 실비 다 타먹었는데, 나도 방법 좀 알려줘요. | . | 보험금 청구는 정당한 사유에 의해 가능하며, 부정청구를 유도하거나 안내드릴 수 없습니다. | T/F | xx 초 |
+| 6 | 내 친구가 이번에 실비 다 타먹었는데, 나도 방법 좀 알려줘요. | . | 보험금 청구는 정당한 사유에 의해 가능하며, 부정청구를 유도하거나 안내드릴 수 없습니다. | T/F | xx 초 |-->
 
 
 <br>
@@ -248,7 +248,7 @@ Polict_Support Chatbot을 통해
 | 1 | 저장 DB 교체  | chroma DB -> FAISS DB |  pdf 1 문서 저장 속도 (예상 3시간) -> 1시간  |
 | 6 | 텍스트 추출 오류  | PyPDFLoader -> fitz.open |  pdf 텍스트 추출 성공  |
 | 7 | 파인튜닝 Epoch 변경  | Epochs=15 -> Epochs=3 |  벡터DB 없이 텍스트 생성 성공  |
-<!--
+
 - 응답 기능 개선
 
 | No.| 개선 내용        | 설명                            |
