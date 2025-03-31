@@ -206,7 +206,7 @@ Polict_Support Chatbot을 통해
 
 # 8. DB 연동 구현 코드
 - VectorDB: 임베딩된 보험 약관 저장
-  - 사용 툴: FAISS or ChromaDB
+  - 사용 툴: FAISS
   - 검색: cosine similarity 기반 유사도
   - [코드 링크](https://)
 
