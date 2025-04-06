@@ -1,0 +1,69 @@
+변수명	설명
+chat_hist	전체 질문/답변 기록 리스트
+insurance_selected	보험사/상품 선택 완료 여부
+user_input_prefill	FAQ 버튼 클릭 시 입력창 자동 채움
+
+변수명	설명
+faiss_path	저장된 FAISS 인덱스 파일 경로 (./faiss_index.bin)
+meta_path	문서 메타데이터 (chunk 텍스트, 소스 등) 경로 (./documents.pkl)
+embedding_model	임베딩 모델 객체 (예: sentence-transformers)
+retriever	FAISS 인덱스를 기반으로 유사 문서 검색하는 객체
+query_text	사용자의 질문 입력 문자열
+top_docs	유사도가 높은 문서 리스트 (검색 결과)
+context_text	LLM 입력에 사용될 문서 내용 문자열
+llm_prompt	최종 LLM에 입력되는 프롬프트 텍스트
+llm_response	LLM이 생성한 최종 응답 텍스트
+hf_api_key	Hugging Face API Key (환경변수로 로드됨)
+llm_model	Hugging Face LLM 모델 객체 (API 연동 or 로컬)
+
+변수명	의미 및 설명
+ins_name	보험사 이름 (insurance name)
+ins_type	보험 상품 종류 (insurance type)
+ins_link	보험사 공식 사이트 링크
+user_text	사용자가 입력한 질문 텍스트
+bot_text	챗봇이 출력한 응답 텍스트
+chat_hist	전체 대화 기록 (chat history)
+user_form	질문 입력 폼
+chat_input	대화 입력 필드 (텍스트박스)
+chat_send	질문 전송 버튼 (Submit 버튼 상태)
+msg_pair	질문-응답 튜플 (한 쌍의 메시지)
+fb_list	피드백 저장 리스트 (feedback list)
+fb_type	좋아요/싫어요 구분
+
+[1] Streamlit UI 시작
+        │
+        ▼
+[2] 사이드바에서 보험사(ins_name) & 보험상품(ins_type) 선택
+        │
+        ▼
+[3] ✅ '선택 완료' 버튼 클릭
+        │
+        ▼
+[4] 챗봇이 질문 입력 요청 & FAQ 추천
+        │
+        ▼
+[5] 사용자가 질문 입력 또는 FAQ 선택
+        │
+        ▼
+[6] get_bot_response(user_text, ins_name, ins_type)
+        │
+        ▼
+     ┌────────────────────────────────────┐
+     │ 내부:                              │
+     │ ① get_db_paths()                   │
+     │     └─ FAISS 경로, 문서 경로 반환   │
+     │ ② run_llm_query()                  │
+     │     └─ 검색 → 프롬프트 생성 → LLM 호출│
+     └────────────────────────────────────┘
+        │
+        ▼
+[7] 챗봇이 답변 출력 → 대화 기록(chat_hist) 저장
+        │
+        ▼
+[8] 👍 / 👎 피드백 버튼 노출
+        │
+        ▼
+[9] 피드백 선택 시 → fb_list에 저장
+        │
+        ▼
+[10] JSON으로 피드백 저장 or 다운로드
